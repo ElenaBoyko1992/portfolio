@@ -1,16 +1,36 @@
 .mainBlock {
-    height: 100vh;
+    min-height: 100vh;
     background-color: #ffb4f6;
+    display: flex;
+    align-items: center;
 
+}
+
+.mainContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px 0px;
 }
 
 .text {
     width: 300px;
     background-color: darkgray;
+
 }
 
 .photo {
     width: 300px;
     height: 400px;
     background-color: darkgray;
+}
+
+@media (max-width: 780px) {
+    .mainContainer {
+        flex-direction: column;
+    }
+    .text {
+        margin-bottom: 20px;
+
+    }
 }
