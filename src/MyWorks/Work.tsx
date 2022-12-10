@@ -15,7 +15,9 @@ function Work(props: WorkPropsType) {
                 <button className={style.button}>Watch</button>
             </div>
             <div className={style.description}>
-                <div className={style.projectName}>{props.projectName}</div>
+                <div className={style.projectName}>
+                    <span>{props.projectName}</span>
+                </div>
                 <div className={style.shortDescription}>{props.shortDescription}</div>
             </div>
         </div>

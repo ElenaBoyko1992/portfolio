@@ -10,9 +10,10 @@ function MyWorks() { //ПОТОМ ПРОМАПИТЬ!
             <div className={`${commonStyles.container} ${style.myWorksContainer}`}>
                 <h2 className={commonStyles.title}>My works</h2>
                 <div className={style.myWorks}>
-                    <Work img={''} projectName={'Project name'} shortDescription={'Short description'}/>
-                    <Work img={''} projectName={'Project name'} shortDescription={'Short description'}/>
-
+                    <Work img={''} projectName={'Project name'}
+                          shortDescription={'Short description. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime numquam odio reiciendis similique soluta. Ab accusantium consectetur, cupiditate dolor enim '}/>
+                    <Work img={''} projectName={'Project name'}
+                          shortDescription={'Short description. Eveniet ex expedita hic libero numquam officiis possimus temporibus vitae!'}/>
                 </div>
             </div>
         </div>
