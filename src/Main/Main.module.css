@@ -34,3 +34,9 @@
 
     }
 }
+
+@media (max-width: 400px) {
+    .text, .photo {
+        width: 280px;
+    }
+}

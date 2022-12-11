@@ -6,13 +6,14 @@ function Contacts() {
     return (
         <div className={style.contactsBlock}>
             <div className={`${commonStyles.container} ${style.contactsContainer}`}>
-                <h2 className={`${commonStyles.title} ${style.distantWorkTitle}`}>My contacts</h2>
-                <form action="">
-                    <input type="text"/>
-                    <input type="text"/>
-                    <textarea></textarea>
+                <h2 className={`${commonStyles.title} ${style.contactsTitle}`} >Contacts</h2>
+                <form className={style.form} action="" >
+                    <input className={style.input} type="text"/>
+                    <input className={style.input} type="text"/>
+                    <textarea className={style.textarea}></textarea>
+                    <input type="submit" value="Send" className={style.button}/>
                 </form>
-                <button>send</button>
+
             </div>
         </div>
     );

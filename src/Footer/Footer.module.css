@@ -1,0 +1,21 @@
+.footer {
+    background-color: pink;
+}
+
+.footerContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.boxes {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.box{
+    width: 40px;
+    height: 40px;
+    background-color: darkgray;
+    margin: 0 15px;
+}
