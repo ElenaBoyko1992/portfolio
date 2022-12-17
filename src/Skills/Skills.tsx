@@ -3,19 +3,22 @@ import style from './Skills.module.css'
 import commonStyles from '../common/Styles/CommonStyles.module.css'
 import Skill from "./Skill/Skill";
 
-function Skills() { //ПОТОМ ПРОМАПИТЬ!
+type SkillType = {
+    id: number
+    title: string
+    description: string
+}
+type SkillsPropsType = {
+    skills: Array<SkillType>
+}
+
+function Skills(props: SkillsPropsType) { //ПОТОМ ПРОМАПИТЬ!
     return (
         <div className={style.skillsBlock}>
             <div className={`${commonStyles.container} ${style.skillsContainer}`}>
                 <h2 className={commonStyles.title}>Skills</h2>
                 <div className={style.skills}>
-                    <Skill title={'JS'}
-                           description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, adipisci ducimus eaque illo ipsam laudantium molestiae nesciunt optio possimus provident.'}/>
-                    <Skill title={'CSS'}
-                           description={'Quos sequi soluta tempore velit, voluptatibus? Provident saepe sapiente ullam.'}/>
-
-                    <Skill title={'React'}
-                           description={'Adipisicing elit. Accusamus, adipisci ducimus eaque illo ipsam laudantium molestiae nesciunt optio possimus provident.'}/>
+                    {props.skills.map(s => <Skill key={s.id} title={s.title} description={s.description}/>)}
                 </div>
             </div>
         </div>

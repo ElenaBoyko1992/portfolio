@@ -1,7 +1,12 @@
 import React from 'react';
 import style from './Skill.module.css'
 
-function Skill(props:any) {
+type SkillPropsType = {
+    title: string
+    description: string
+}
+
+function Skill(props: SkillPropsType) {
     return (
         <div className={style.skill}>
             <div className={style.icon}></div>
