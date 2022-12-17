@@ -3,34 +3,41 @@
     background-color: #f7f7f7;
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
     margin: 0px 20px 20px 20px;
 }
 
 .preview {
     width: 100%;
-    position: relative;
     background-color: darkgray;
-}
-
-.image {
-    display: block;
-    width: 100%;
     height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .button {
-    position: absolute;
-    top: 50%;
-    left: 39%;
+    border: 1px solid grey;
+    border-radius: 3px;
+    padding: 3px;
+    text-decoration: none;
+    color: black;
+    background: #eeeef5;
+}
+
+.button:hover {
+    background: darkgray;
 }
 
 .description {
     background-color: rgba(176, 173, 182, 0.35);
-    width: 100%;
     padding: 10px 20px;
-    height: 100%;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .projectName span, .shortDescription {
@@ -44,4 +51,5 @@
 
 .shortDescription {
     text-align: left;
+    flex: 1 1 auto;
 }

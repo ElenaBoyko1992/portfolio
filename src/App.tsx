@@ -7,6 +7,7 @@ import MyWorks from "./MyWorks/MyWorks";
 import DistantWork from "./DistantWork/DistantWork";
 import Contacts from "./Сontacts/Contacts";
 import Footer from "./Footer/Footer";
+import {BrowserRouter} from "react-router-dom";
 
 function App() {
     const skills = [{
@@ -24,26 +25,28 @@ function App() {
     }]
     const myWorks = [{
         id: 1,
-        img: '',
+        img: 'http://pikstok.ru/images/images/1528372927887.jpg',
         projectName: 'Project name',
         shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, adipisci ducimus eaque illo ipsam laudantium molestiae nesciunt optio possimus provident.'
     }, {
         id: 2,
-        img: '',
+        img: 'https://kartinkin.net/uploads/posts/2022-02/1644920009_2-kartinkin-net-p-krasivie-kartinki-so-smislom-2.jpg',
         projectName: 'Project name',
         shortDescription: 'Quos sequi soluta tempore velit, voluptatibus? Provident saepe sapiente ullam.'
     }]
 
     return (
-        <div className="App">
-            <Header/>
-            <Main/>
-            <Skills skills={skills}/>
-            <MyWorks myWorks={myWorks}/>
-            <DistantWork/>
-            <Contacts/>
-            <Footer/>
-        </div>
+        <BrowserRouter>
+            <div className="App">
+                <Header/>
+                <Main/>
+                <Skills skills={skills}/>
+                <MyWorks myWorks={myWorks}/>
+                <DistantWork/>
+                <Contacts/>
+                <Footer/>
+            </div>
+        </BrowserRouter>
     );
 }
 

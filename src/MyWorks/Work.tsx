@@ -1,5 +1,7 @@
 import React from 'react';
 import style from './Work.module.css'
+import {NavLink} from "react-router-dom";
+
 
 type WorkPropsType = {
     img: string
@@ -10,9 +12,9 @@ type WorkPropsType = {
 function Work(props: WorkPropsType) {
     return (
         <div className={style.work}>
-            <div className={style.preview}>
-                <img className={style.image} src={props.img} alt="picture"/>
-                <button className={style.button}>Watch</button>
+            <div className={style.preview}
+                 style={{backgroundImage: `url(${props.img}`}}>
+                <NavLink className={style.button} to={''}>Watch</NavLink>
             </div>
             <div className={style.description}>
                 <div className={style.projectName}>
