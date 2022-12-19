@@ -25,7 +25,7 @@ function App() {
     }]
     const myWorks = [{
         id: 1,
-        img: 'http://pikstok.ru/images/images/1528372927887.jpg',
+        img: 'https://funik.ru/wp-content/uploads/2018/10/0a37dbac85e134cfb3a5.jpg',
         projectName: 'Project name',
         shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, adipisci ducimus eaque illo ipsam laudantium molestiae nesciunt optio possimus provident.'
     }, {
