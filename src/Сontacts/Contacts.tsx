@@ -11,7 +11,7 @@ function Contacts() {
                     <input className={style.input} type="text"/>
                     <input className={style.input} type="text"/>
                     <textarea className={style.textarea}></textarea>
-                    <input type="submit" value="Send" className={style.button}/>
+                    <button type="submit" className={style.button}>Send</button>
                 </form>
 
             </div>
