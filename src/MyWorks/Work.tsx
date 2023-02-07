@@ -13,7 +13,7 @@ function Work(props: WorkPropsType) {
     return (
         <div className={style.work}>
             <div className={style.preview}
-                 style={{backgroundImage: `url(${props.img}`}}>
+                 style={{backgroundImage: `url('${props.img}')`}}>
                 <NavLink className={style.button} to={''}>Watch</NavLink>
             </div>
             <div className={style.description}>
