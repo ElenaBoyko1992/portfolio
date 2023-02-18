@@ -1,6 +1,13 @@
-.nav {
-    border: 1px solid;
-    width: 300px;
+.navs {
     display: flex;
-    justify-content: space-between;
+}
+
+.nav {
+    padding: 0 0.85em;
+    color: hsla(0,0%,98%,.9);
+    transition: all .2s ease;
+    text-decoration: none;
+}
+.nav:hover {
+    color: #ffc107;
 }

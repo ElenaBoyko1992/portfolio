@@ -1,13 +1,14 @@
 import React from 'react';
 import style from './Nav.module.css'
+import {Navigate, Route, Routes} from "react-router-dom";
 
 function Nav() {
     return (
-        <div className={style.nav}>
-            <a href="">Main</a>
-            <a href="">Skills</a>
-            <a href="">Projects</a>
-            <a href="">Contacts</a>
+        <div className={style.navs}>
+            <a className={style.nav} href='#main'>Main</a>
+            <a className={style.nav} href='#skills'>Skills</a>
+            <a className={style.nav} href='#projects'>Projects</a>
+            <a className={style.nav} href='#contacts'>Contacts</a>
         </div>
     );
 }

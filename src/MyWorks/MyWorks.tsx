@@ -2,6 +2,7 @@ import React from 'react';
 import style from './MyWorks.module.scss'
 import commonStyles from '../common/Styles/CommonStyles.module.css'
 import Work from "./Work";
+import Title from "../common/Components/Title";
 
 type MyWork = {
     id: number
@@ -16,9 +17,9 @@ type MyWorksPropsType = {
 function MyWorks(props: MyWorksPropsType) {
 
     return (
-        <div className={style.myWorksBlock}>
+        <div className={style.myWorksBlock} id={'projects'}>
             <div className={`${commonStyles.container} ${style.myWorksContainer}`}>
-                <h2 className={commonStyles.title}>My works</h2>
+                <Title titleValue={'My works'}/>
                 <div className={style.myWorks}>
                     {props.myWorks.map(w => <Work key={w.id} img={w.img} projectName={w.projectName}
                                                   shortDescription={w.shortDescription}/>)}

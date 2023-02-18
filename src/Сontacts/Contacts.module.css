@@ -1,6 +1,6 @@
 .contactsBlock {
     min-height: 100vh;
-    background-color: #d4ffc0;
+    background-color: #212529;
     display: flex;
     align-items: center;
 }
@@ -9,10 +9,6 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-}
-
-.contactsTitle {
-    margin-bottom: 40px;
 }
 
 .form {

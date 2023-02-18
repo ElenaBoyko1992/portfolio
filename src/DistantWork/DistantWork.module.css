@@ -1,7 +1,7 @@
 .distantWorkBlock {
     display: flex;
     align-items: center;
-    background-color: lightyellow;
+    background-color: #343a40;
     padding: 70px 0;
 }
 
@@ -11,10 +11,3 @@
     align-items: center;
 }
 
-.distantWorkTitle{
-text-align: center;
-}
-
-.button {
-    margin: 15px;
-}

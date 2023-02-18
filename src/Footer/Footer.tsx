@@ -1,12 +1,13 @@
 import React from 'react';
 import style from './Footer.module.css'
 import commonStyles from "../common/Styles/CommonStyles.module.css";
+import Title from "../common/Components/Title";
 
 function Footer() {
     return (
         <div className={style.footer}>
             <div className={`${commonStyles.container} ${style.footerContainer}`}>
-                <h2 className={commonStyles.title}>Elena Boiko</h2>
+                <Title titleValue={'Elena Boiko'}/>
                 <div className={style.boxes}>
                     <div className={style.box}></div>
                     <div className={style.box}></div>
