@@ -5,18 +5,7 @@ import Skill from './Skill/Skill';
 import Title from '../common/Components/Title';
 import js from "../assets/icons/java-script-svgrepo-com.svg";
 
-export type SkillType = {
-    id: number
-    title: string
-    description: string
-    icon: string
-}
-type SkillsPropsType = {
-    skills: Array<SkillType>
-}
-
-
-function Skills(props: SkillsPropsType) { //ПОТОМ ПРОМАПИТЬ!
+function Skills(props: SkillsPropsType) {
     return (
         <div className={style.skillsBlock} id={'skills'}>
             <div className={`${commonStyles.container} ${style.skillsContainer}`}>
@@ -29,4 +18,14 @@ function Skills(props: SkillsPropsType) { //ПОТОМ ПРОМАПИТЬ!
     );
 }
 
+//types
+export type SkillType = {
+    id: number
+    title: string
+    description: string
+    icon: string
+}
+type SkillsPropsType = {
+    skills: Array<SkillType>
+}
 export default Skills;

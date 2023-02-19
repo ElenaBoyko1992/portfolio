@@ -8,14 +8,15 @@ function Main() {
     return (
         <div id={'main'} className={style.mainBlock}>
             <div className={`${styleContainer.container} ${style.mainContainer}`}>
+                <div className={style.photo}>
+                    <img src={photo}/>
+                </div>
                 <div className={style.text}>
                     <span>Welcome</span>
                     <h1>My name is Elena Boiko</h1>
                     <p>I`m a frontend developer</p>
                 </div>
-                <div className={style.photo}>
-                    <img src={photo}/>
-                </div>
+
             </div>
 
         </div>

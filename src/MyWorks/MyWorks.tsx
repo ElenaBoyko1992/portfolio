@@ -9,6 +9,7 @@ type MyWork = {
     img: string
     projectName: string
     shortDescription: string
+    link: string
 }
 type MyWorksPropsType = {
     myWorks: Array<MyWork>
@@ -22,7 +23,7 @@ function MyWorks(props: MyWorksPropsType) {
                 <Title titleValue={'My works'}/>
                 <div className={style.myWorks}>
                     {props.myWorks.map(w => <Work key={w.id} img={w.img} projectName={w.projectName}
-                                                  shortDescription={w.shortDescription}/>)}
+                                                  shortDescription={w.shortDescription} link={w.link}/>)}
                 </div>
             </div>
         </div>

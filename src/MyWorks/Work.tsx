@@ -1,20 +1,22 @@
 import React from 'react';
-import style from './Work.module.css'
-import {NavLink} from "react-router-dom";
+import style from './Work.module.scss'
+import {Link, NavLink} from "react-router-dom";
 
 
 type WorkPropsType = {
     img: string
     projectName: string
     shortDescription: string
+    link: string
 }
 
 function Work(props: WorkPropsType) {
+
     return (
         <div className={style.work}>
             <div className={style.preview}
                  style={{backgroundImage: `url('${props.img}')`}}>
-                <NavLink className={style.button} to={''}>Watch</NavLink>
+                <a className={style.button} href={props.link}>Watch</a>
             </div>
             <div className={style.description}>
                 <div className={style.projectName}>
