@@ -1,0 +1,16 @@
+.navs {
+  display: flex;
+
+  .nav {
+    padding: 0 0.85em;
+    color: hsla(0, 0%, 98%, .9);
+    transition: all .2s ease;
+    text-decoration: none;
+
+    &:hover {
+      color: #ffc107;
+    }
+  }
+}
+
+

@@ -1,0 +1,65 @@
+@import '../common/styles/sass/variables';
+
+.mainBlock {
+  min-height: 100vh;
+  background-color: $bgColor;
+  display: flex;
+  align-items: center;
+
+  .mainContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    @media (max-width: 780px) {
+      flex-direction: column;
+    }
+
+    .photo {
+      width: 300px;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      @media (max-width: 400px) {
+        width: 280px;
+      }
+
+      img {
+        width: 100%;
+        max-height: 100%;
+        border-radius: 30px;
+      }
+    }
+
+    .text {
+      width: 300px;
+      color: #dee3e4;
+      font-size: 1.3125rem;
+      font-weight: 400;
+      @media (max-width: 400px) {
+        width: 280px;
+      }
+      @media (max-width: 780px) {
+        margin-bottom: 20px;
+      }
+
+      span {
+        font-weight: 500;
+        line-height: 1.8;
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+        color: #fff;
+      }
+
+      h1 {
+        font-weight: 600;
+        font-size: 3rem;
+        color: $primaryColor;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+
+
+

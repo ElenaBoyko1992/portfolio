@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './DistantWork.module.scss'
-import commonStyles from '../common/Styles/CommonStyles.module.css'
+import commonStyles from '../common/Styles/CommonStyles.module.scss'
 import Title from "../common/Components/Title";
 
 

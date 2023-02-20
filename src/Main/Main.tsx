@@ -1,6 +1,6 @@
 import React from 'react';
-import style from './Main.module.css'
-import styleContainer from '../common/Styles/CommonStyles.module.css'
+import style from './Main.module.scss'
+import styleContainer from '../common/Styles/CommonStyles.module.scss'
 import photo from '../assets/images/myPhoto.jpeg'
 
 

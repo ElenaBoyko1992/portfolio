@@ -1,4 +1,4 @@
-import style from "./Title.module.css";
+import style from "./Title.module.scss";
 import React from "react";
 
 const Title = (props: TitlePropsType) => {

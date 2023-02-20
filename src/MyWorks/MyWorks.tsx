@@ -1,10 +1,10 @@
 import React from 'react';
 import style from './MyWorks.module.scss'
-import commonStyles from '../common/Styles/CommonStyles.module.css'
+import commonStyles from '../common/Styles/CommonStyles.module.scss'
 import Work from "./Work";
 import Title from "../common/Components/Title";
 
-type MyWork = {
+export type MyWork = {
     id: number
     img: string
     projectName: string

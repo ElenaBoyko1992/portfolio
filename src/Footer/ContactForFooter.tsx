@@ -1,11 +1,11 @@
 import React from 'react';
-import style from "./ContactForFooter.module.css";
+import style from "./ContactForFooter.module.scss";
 
 function ContactForFooter(props: ContactForFooterPropsType) {
 
     return (
 
-          <a href={props.link} className={style.box} style={{backgroundImage: `url('${props.logo}')`}}></a>
+        <a href={props.link} className={style.socialLogo} style={{backgroundImage: `url('${props.logo}')`}}></a>
 
     );
 }

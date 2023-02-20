@@ -1,26 +1,30 @@
 @import '../common/styles/sass/variables';
 
-.myWorksBlock {
+.skillsBlock {
   min-height: 100vh;
-  background-color: $bgColor;
+  background-color: $bgSecondColor;
   display: flex;
   align-items: center;
-  padding: 0 0 48px;
 
-  .myWorksContainer {
+  .skillsContainer {
     display: flex;
     align-items: center;
     flex-direction: column;
 
-    .myWorks {
+    .skills {
       width: 100%;
       display: flex;
-      justify-content: space-around;
       flex-wrap: wrap;
-      padding: 40px 0px 0px 0px;
+      align-items: flex-start;
+      padding: 40px 0 0;
+      @media (max-width: 750px) {
+        display: block;
+      }
     }
+
   }
 }
+
 
 
 

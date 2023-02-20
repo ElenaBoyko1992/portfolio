@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './Nav.module.css'
+import style from './Nav.module.scss'
 import {Navigate, Route, Routes} from "react-router-dom";
 
 function Nav() {

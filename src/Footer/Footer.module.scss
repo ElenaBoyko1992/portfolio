@@ -1,0 +1,21 @@
+@import '../common/styles/sass/variables';
+
+.footer {
+  background-color: $bgSecondColor;
+
+  .footerContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .socialLogos {
+      display: flex;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+
+
+
+

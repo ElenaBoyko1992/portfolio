@@ -1,6 +1,6 @@
 import React from 'react';
-import style from './Contacts.module.css'
-import commonStyles from '../common/Styles/CommonStyles.module.css'
+import style from './Contacts.module.scss'
+import commonStyles from '../common/Styles/CommonStyles.module.scss'
 import Title from "../common/Components/Title";
 import {useFormik} from "formik";
 

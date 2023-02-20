@@ -3,7 +3,7 @@ import './App.css';
 import Header from "./Header/Header";
 import Main from "./Main/Main";
 import Skills, {SkillType} from "./Skills/Skills";
-import MyWorks from './MyWorks/MyWorks';
+import MyWorks, {MyWork} from './MyWorks/MyWorks';
 import DistantWork from './DistantWork/DistantWork';
 import Contacts from './Сontacts/Contacts';
 import Footer, {ContactsForFooterType} from './Footer/Footer';
@@ -36,7 +36,7 @@ function App() {
         icon: react
     },
     ]
-    const myWorks = [{
+    const myWorks: Array<MyWork> = [{
         id: 1,
         img: todoImg,
         projectName: 'To-do list',

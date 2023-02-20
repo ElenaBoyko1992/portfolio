@@ -1,7 +1,5 @@
 import React from 'react';
 import style from './Work.module.scss'
-import {Link, NavLink} from "react-router-dom";
-
 
 type WorkPropsType = {
     img: string

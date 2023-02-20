@@ -1,12 +1,15 @@
-.skill {
-    width: 250px;
-    display: flex;
-    margin-bottom: 48px;
-    flex: 0 0 50%;
-    padding: 0 12px;
-}
+@import '../../common/styles/sass/variables';
 
-.icon {
+.skill {
+  display: flex;
+  margin-bottom: 48px;
+  padding: 0 12px;
+  @media (min-width: 751px) {
+    flex: 0 0 50%;
+    width: 250px;
+  }
+
+  .icon {
     width: 70px;
     height: 70px;
     background-color: #212529;
@@ -17,18 +20,22 @@
     margin-right: 20px;
     flex: 0 0 auto;
 
-}
+  }
 
-.titleOfSkill {
+  .titleOfSkill {
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 10px;
     color: #ffffff;
     line-height: 1.2;
-}
+  }
 
-.description {
-    color: #adb5bd;
+  .description {
+    color: $textColor;
     line-height: 1.8;
     font-weight: 400;
+  }
 }
+
+
+

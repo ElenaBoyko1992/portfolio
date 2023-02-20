@@ -1,6 +1,6 @@
 import React from 'react';
-import style from './Footer.module.css'
-import commonStyles from "../common/Styles/CommonStyles.module.css";
+import style from './Footer.module.scss'
+import commonStyles from "../common/Styles/CommonStyles.module.scss";
 import Title from "../common/Components/Title";
 import Skill from "../Skills/Skill/Skill";
 import telegramLogo from "../assets/icons/telegram-svgrepo-com.svg";
@@ -11,11 +11,7 @@ function Footer(props: FooterPropsType) {
         <div className={style.footer}>
             <div className={`${commonStyles.container} ${style.footerContainer}`}>
                 <Title titleValue={'Elena Boiko'}/>
-                <div className={style.boxes}>
-                    <div className={style.box}></div>
-                    <div className={style.box}></div>
-                    <div className={style.box}></div>
-                    <div className={style.box}></div>
+                <div className={style.socialLogos}>
                     {props.contactsForFooter.map((c) => <ContactForFooter key={c.id} logo={c.logo} link={c.link}/>)}
                 </div>
             </div>
