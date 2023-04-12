@@ -4,9 +4,7 @@ import style from "./ContactForFooter.module.scss";
 function ContactForFooter(props: ContactForFooterPropsType) {
 
     return (
-
         <a href={props.link} className={style.socialLogo} style={{backgroundImage: `url('${props.logo}')`}}></a>
-
     );
 }
 
