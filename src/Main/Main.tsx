@@ -8,8 +8,6 @@ import type {Container, Engine} from "tsparticles-engine";
 import {loadFull} from "tsparticles";
 
 
-
-
 function Main() {
     const particlesInit = useCallback(async (engine: Engine) => {
         console.log(engine);
@@ -23,9 +21,7 @@ function Main() {
     const particlesLoaded = useCallback(async (container: Container | undefined) => {
         await console.log(container);
     }, []);
-
     return (
-
         <div id={'main'} className={style.mainBlock}>
 
             <Particles className={style.tsparticles}
@@ -33,7 +29,6 @@ function Main() {
                        loaded={particlesLoaded}
 
                        options={{
-
                            fullScreen: false,
                            background: {
                                color: {
@@ -108,13 +103,15 @@ function Main() {
                        }}
             />
             <div className={`${styleContainer.container} ${style.mainContainer}`}>
-                <div className={style.photo}>
-                    <img src={photo}/>
-                </div>
-                <div className={style.text}>
-                    <span>Welcome</span>
-                    <h1>My name is Elena Boiko</h1>
-                    <p>I`m a frontend developer</p>
+                <div className={style.wrapper}>
+                    <div className={style.photo}>
+                        <img src={photo}/>
+                    </div>
+                    <div className={style.text}>
+                        <span>Welcome</span>
+                        <h1>My name is Elena Boiko</h1>
+                        <p>I`m a frontend developer</p>
+                    </div>
                 </div>
 
             </div>

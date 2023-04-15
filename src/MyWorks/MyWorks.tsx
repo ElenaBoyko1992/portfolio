@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import style from './MyWorks.module.scss'
 import commonStyles from '../common/Styles/CommonStyles.module.scss'
 import Work from "./Work";
 import Title from "../common/Components/Title";
+import Particles from "react-tsparticles";
+import {Container, Engine} from "tsparticles-engine";
+import {loadFull} from "tsparticles";
 
 export type MyWork = {
     id: number
@@ -16,7 +19,6 @@ type MyWorksPropsType = {
 }
 
 function MyWorks(props: MyWorksPropsType) {
-
     return (
         <div className={style.myWorksBlock} id={'projects'}>
             <div className={`${commonStyles.container} ${style.myWorksContainer}`}>

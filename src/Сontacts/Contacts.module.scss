@@ -1,4 +1,5 @@
 @import '../common/styles/sass/variables';
+
 .contactsBlock {
   min-height: 100vh;
   background-color: $bgColor;
@@ -16,22 +17,48 @@
       align-items: center;
       width: 280px;
 
+
       .input {
         margin-bottom: 15px;
         width: 100%;
+        background: $bgSecondColor;
+        padding: 5px;
+        color: #ffffff;
+        border: 1px solid $bgColor;
+        border-radius: 5px;
+        font-size: inherit;
       }
 
       .textarea {
         margin-bottom: 30px;
         width: 100%;
+        background: $bgSecondColor;
+        padding: 5px;
+        color: #ffffff;
+        border: 1px solid $bgColor;
+        border-radius: 5px;
+        font-family: 'Poppins', sans-serif;
+        font-size: inherit;
       }
 
       .button {
-        width: 50px;
+        border: 2px solid $primaryColor;
+        border-radius: 50rem;
+        padding: 0.8rem 2.6rem;
+        text-decoration: none;
+        color: $primaryColor;
+        position: relative;
+        z-index: 2;
+        background: transparent;
+        &:hover {
+          background: $primaryColor;
+          color: #ffffff;
+        }
       }
     }
   }
 }
+
 
 
 
