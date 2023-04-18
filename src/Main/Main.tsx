@@ -6,7 +6,7 @@ import {useCallback} from "react";
 import Particles from "react-tsparticles";
 import type {Container, Engine} from "tsparticles-engine";
 import {loadFull} from "tsparticles";
-
+import {Fade} from "react-awesome-reveal";
 
 function Main() {
     const particlesInit = useCallback(async (engine: Engine) => {
@@ -23,7 +23,6 @@ function Main() {
     }, []);
     return (
         <div id={'main'} className={style.mainBlock}>
-
             <Particles className={style.tsparticles}
                        init={particlesInit}
                        loaded={particlesLoaded}
@@ -79,7 +78,7 @@ function Main() {
                                        default: "bounce",
                                    },
                                    random: false,
-                                   speed: 3,
+                                   speed: 2,
                                    straight: false,
                                },
                                number: {
@@ -102,20 +101,20 @@ function Main() {
                            detectRetina: true,
                        }}
             />
-            <div className={`${styleContainer.container} ${style.mainContainer}`}>
-                <div className={style.wrapper}>
-                    <div className={style.photo}>
-                        <img src={photo}/>
-                    </div>
-                    <div className={style.text}>
-                        <span>Welcome</span>
-                        <h1>My name is Elena Boiko</h1>
-                        <p>I`m a frontend developer</p>
+            <Fade direction={'left'} >
+                <div className={`${styleContainer.container} ${style.mainContainer}`}>
+                    <div className={style.contentBlock}>
+                        <div className={style.photo}>
+                            <img src={photo}/>
+                        </div>
+                        <div className={style.text}>
+                            <span>Welcome</span>
+                            <h1>My name is Elena Boiko</h1>
+                            <p>I`m a frontend developer</p>
+                        </div>
                     </div>
                 </div>
-
-            </div>
-
+            </Fade>
         </div>
     )
 

@@ -5,6 +5,7 @@
   background-color: $bgColor;
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
   padding: 70px 0;
 
@@ -22,7 +23,7 @@
     display: flex;
     justify-content: center;
 
-    .wrapper {
+    .contentBlock {
       display: flex;
       align-items: center;
 
@@ -89,6 +90,7 @@
     }
   }
 }
+
 
 
 

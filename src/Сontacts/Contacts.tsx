@@ -3,6 +3,7 @@ import style from './Contacts.module.scss'
 import commonStyles from '../common/Styles/CommonStyles.module.scss'
 import Title from "../common/Components/Title";
 import {useFormik} from "formik";
+import {Fade} from "react-awesome-reveal";
 
 function Contacts() {
     const formik = useFormik({
@@ -18,25 +19,26 @@ function Contacts() {
     })
     return (
         <div className={style.contactsBlock} id={'contacts'}>
-            <div className={`${commonStyles.container} ${style.contactsContainer}`}>
-                <Title titleValue={'Contacts'}/>
-                <form className={style.form} action="" onSubmit={formik.handleSubmit}>
-                    <input className={style.input} type="text"
-                           placeholder={'Enter your name'}
-                           {...formik.getFieldProps('name')}
-                    />
-                    <input className={style.input} type="text"
-                           placeholder={'email'}
-                           {...formik.getFieldProps('email')}
-                    />
-                    <textarea className={style.textarea}
-                              placeholder={'message'}
-                              {...formik.getFieldProps('message')}
-                    ></textarea>
-                    <button type="submit" className={style.button}>Send</button>
-                </form>
-
-            </div>
+            <Fade direction={'left'}>
+                <div className={`${commonStyles.container} ${style.contactsContainer}`}>
+                    <Title titleValue={'Contacts'}/>
+                    <form className={style.form} action="" onSubmit={formik.handleSubmit}>
+                        <input className={style.input} type="text"
+                               placeholder={'Enter your name'}
+                               {...formik.getFieldProps('name')}
+                        />
+                        <input className={style.input} type="text"
+                               placeholder={'email'}
+                               {...formik.getFieldProps('email')}
+                        />
+                        <textarea className={style.textarea}
+                                  placeholder={'message'}
+                                  {...formik.getFieldProps('message')}
+                        ></textarea>
+                        <button type="submit" className={style.button}>Send</button>
+                    </form>
+                </div>
+            </Fade>
         </div>
     );
 }
