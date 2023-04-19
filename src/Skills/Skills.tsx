@@ -4,6 +4,7 @@ import Skill from './Skill/Skill';
 import Title from '../common/Components/Title';
 import {Fade} from "react-awesome-reveal";
 
+
 function Skills(props: SkillsPropsType) {
     return (
 

@@ -1,9 +1,10 @@
 @import '../common/styles/sass/variables';
+@import '../common/styles/sass/mixins';
 
 .footer {
-  background-color: $bgSecondColor;
 
   .footerContainer {
+    @include container();
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -11,6 +12,20 @@
     .socialLogos {
       display: flex;
       margin-bottom: 30px;
+
+      .socialLogo {
+        width: 30px;
+        height: 30px;
+        margin: 0 15px;
+
+        @include bgSettings(30px, center);
+
+        &:hover {
+          position: relative;
+          top: -5px;
+          height: 35px;
+        }
+      }
     }
   }
 }
