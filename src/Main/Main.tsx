@@ -1,12 +1,25 @@
 import React from 'react';
 import style from './Main.module.scss'
-import styleContainer from '../common/Styles/CommonStyles.module.scss'
 import photo from '../assets/images/myPhoto.jpeg'
 import {useCallback} from "react";
 import Particles from "react-tsparticles";
 import type {Container, Engine} from "tsparticles-engine";
 import {loadFull} from "tsparticles";
 import {Fade} from "react-awesome-reveal";
+import ReactTypingEffect from 'react-typing-effect';
+import {Tilt} from 'react-tilt'
+
+const defaultOptionsForTilt = {
+    reverse: false,  // reverse the tilt direction
+    max: 35,     // max tilt rotation (degrees)
+    perspective: 1000,   // Transform perspective, the lower the more extreme the tilt gets.
+    scale: 1.1,    // 2 = 200%, 1.5 = 150%, etc..
+    speed: 1000,   // Speed of the enter/exit transition
+    transition: true,   // Set a transition on enter/exit.
+    axis: null,   // What axis should be disabled. Can be X or Y.
+    reset: true,    // If the tilt effect has to be reset on exit.
+    easing: "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
+}
 
 function Main() {
     const particlesInit = useCallback(async (engine: Engine) => {
@@ -101,16 +114,22 @@ function Main() {
                            detectRetina: true,
                        }}
             />
-            <Fade direction={'left'} >
-                <div className={`${styleContainer.container} ${style.mainContainer}`}>
+            <Fade direction={'left'}>
+                <div className={style.mainContainer}>
                     <div className={style.contentBlock}>
                         <div className={style.photo}>
-                            <img src={photo}/>
+                            <Tilt options={defaultOptionsForTilt}>
+                                <img src={photo}/>
+                            </Tilt>
                         </div>
                         <div className={style.text}>
                             <span>Welcome</span>
                             <h1>My name is Elena Boiko</h1>
-                            <p>I`m a frontend developer</p>
+                            <ReactTypingEffect
+                                className={style.reactTyping}
+                                text={'I`m a frontend developer'}
+                                cursor={' '}
+                            />
                         </div>
                     </div>
                 </div>

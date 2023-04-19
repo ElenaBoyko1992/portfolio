@@ -1,16 +1,18 @@
 import React from 'react';
 import style from './DistantWork.module.scss'
-import commonStyles from '../common/Styles/CommonStyles.module.scss'
 import Title from "../common/Components/Title";
 import {Fade} from "react-awesome-reveal";
+import {ButtonLink} from "common/Components/ButtonLink";
+
+
 
 function DistantWork() {
     return (
         <div className={style.distantWorkBlock}>
             <Fade direction={'left'}>
-                <div className={`${commonStyles.container} ${style.distantWorkContainer}`}>
+                <div className={style.distantWorkContainer}>
                     <Title titleValue={'Looking into remote work options'}/>
-                    <a href='#contacts' className={style.button}>Hire me</a>
+                    <ButtonLink href='#contacts'>Hire me</ButtonLink>
                 </div>
             </Fade>
         </div>

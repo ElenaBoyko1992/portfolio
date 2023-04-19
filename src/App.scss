@@ -1,0 +1,36 @@
+@import './common/Styles/sass/variables';
+/*=============ОБНУЛЕНИЕ=================*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*======================================*/
+body {
+  font-family: $fontFamiy;
+  font-size: 16px;
+}
+
+.App {
+  > div {
+    &:nth-child(n) {
+      background-color: $bgSecondColor;
+    }
+
+    &:nth-child(2n) {
+      background-color: $bgColor;
+    }
+  }
+}

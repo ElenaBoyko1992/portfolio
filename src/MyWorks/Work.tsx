@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import style from './Work.module.scss'
+import {ButtonLink} from "common/Components/ButtonLink";
+
 
 type WorkPropsType = {
     img: string
@@ -22,8 +24,8 @@ function Work(props: WorkPropsType) {
             <div
                 className={buttonIsHover ? `${style.preview} ${style.hoveredButton}` : style.preview}
                 style={{backgroundImage: `url('${props.img}')`}}>
-                <a className={style.button} href={props.link} onMouseEnter={onMouseEnterHandler}
-                   onMouseLeave={onMouseLeaveHandler}>Watch</a>
+                <ButtonLink href={props.link} onMouseEnter={onMouseEnterHandler}
+                        onMouseLeave={onMouseLeaveHandler}>Watch</ButtonLink>
             </div>
             <div className={style.description}>
                 <div className={style.projectName}>

@@ -1,9 +1,19 @@
-@import './variables';
-
 /*образец, поправить*/
 @mixin text($fontfamily, $fontSize, $lineHeight) {
   font-family: $fontfamily;
   font-size: $fontSize;
   line-height: $lineHeight;
   color: $textColor;
+}
+
+
+@mixin bgSettings($bgSize, $bgPosition) {
+  background-size: $bgSize;
+  background-position: $bgPosition;
+  background-repeat: no-repeat;
+}
+
+@mixin container() {
+  height: 100%;
+  margin: 0 auto;
 }

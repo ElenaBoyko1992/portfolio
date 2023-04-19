@@ -1,6 +1,5 @@
 import React from 'react';
 import style from './Contacts.module.scss'
-import commonStyles from '../common/Styles/CommonStyles.module.scss'
 import Title from "../common/Components/Title";
 import {useFormik} from "formik";
 import {Fade} from "react-awesome-reveal";
@@ -20,7 +19,7 @@ function Contacts() {
     return (
         <div className={style.contactsBlock} id={'contacts'}>
             <Fade direction={'left'}>
-                <div className={`${commonStyles.container} ${style.contactsContainer}`}>
+                <div className={style.contactsContainer}>
                     <Title titleValue={'Contacts'}/>
                     <form className={style.form} action="" onSubmit={formik.handleSubmit}>
                         <input className={style.input} type="text"
