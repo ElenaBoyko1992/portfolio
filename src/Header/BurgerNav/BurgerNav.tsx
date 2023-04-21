@@ -1,13 +1,14 @@
 import React, {useState} from 'react';
 import style from 'Header/BurgerNav/BurgerNav.module.scss';
-import {Link, animateScroll as scroll} from "react-scroll";
+import {Link} from "react-scroll";
 
 function BurgerNav() {
-    let [menuIsOpen, setMenuIsOpen] = useState(false);
-    const onBurgerBunClick = () => {
-        setMenuIsOpen(!menuIsOpen)
-    };
 
+    let [menuIsOpen, setMenuIsOpen] = useState(false);
+    const onBurgerBtnClick = () => {
+        setMenuIsOpen(!menuIsOpen)
+        console.log(menuIsOpen)
+    };
     return (
         <div className={style.burgerNavs}>
             <div className={menuIsOpen ? `${style.burgerNavsItems} ${style.show}` : style.burgerNavsItems}>
@@ -19,6 +20,7 @@ function BurgerNav() {
                     smooth={true}
                     offset={-1}
                     duration={500}
+                    onClick={onBurgerBtnClick}
                 >Main</Link>
 
                 <Link
@@ -29,7 +31,7 @@ function BurgerNav() {
                     smooth={true}
                     offset={-1}
                     duration={500}
-
+                    onClick={onBurgerBtnClick}
                 >Skills</Link>
 
                 <Link
@@ -40,6 +42,7 @@ function BurgerNav() {
                     smooth={true}
                     offset={2.5}
                     duration={500}
+                    onClick={onBurgerBtnClick}
                 >Projects</Link>
 
                 <Link
@@ -50,9 +53,15 @@ function BurgerNav() {
                     smooth={true}
                     offset={2.5}
                     duration={500}
+                    onClick={onBurgerBtnClick}
                 >Contacts</Link>
             </div>
-            <div className={style.burgerBtn} onClick={onBurgerBunClick}></div>
+            <div className={menuIsOpen ? `${style.burgerBtn} ${style.btnActive}` : style.burgerBtn}
+                 onClick={onBurgerBtnClick}>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     );
 }

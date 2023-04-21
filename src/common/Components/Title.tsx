@@ -12,6 +12,7 @@ const Title = (props: TitlePropsType) => {
 //types
 type TitlePropsType = {
     titleValue: string
+    id?: string
 }
 
 export default Title;
