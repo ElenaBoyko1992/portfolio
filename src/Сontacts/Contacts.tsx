@@ -18,7 +18,7 @@ function Contacts() {
     })
     return (
         <div className={style.contactsBlock} id={'contacts'}>
-            <Fade direction={'left'}>
+            <Fade direction={'left'} triggerOnce={true}>
                 <div className={style.contactsContainer}>
                     <Title titleValue={'Contacts'}/>
                     <form className={style.form} action="" onSubmit={formik.handleSubmit}>

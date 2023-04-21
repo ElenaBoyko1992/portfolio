@@ -9,7 +9,7 @@ function Skills(props: SkillsPropsType) {
     return (
 
         <div className={style.skillsBlock} id={'skills'}>
-            <Fade direction={'left'} className={style.fade}>
+            <Fade direction={'left'} className={style.fade} triggerOnce={true}>
                 <div className={style.skillsContainer}>
                     <Title titleValue={'Skills'}/>
                     <div className={style.skills}>

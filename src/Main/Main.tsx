@@ -114,7 +114,7 @@ function Main() {
                            detectRetina: true,
                        }}
             />
-            <Fade direction={'left'}>
+            <Fade direction={'left'} triggerOnce={true}>
                 <div className={style.mainContainer}>
                     <div className={style.contentBlock}>
                         <div className={style.photo}>

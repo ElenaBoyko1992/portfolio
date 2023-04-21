@@ -1,5 +1,5 @@
 .navs {
-  display: flex;
+  display: none;
 
   .nav {
     padding: 0 0.85em;
@@ -10,6 +10,13 @@
     &:hover {
       color: #ffc107;
     }
+  }
+
+  .active {
+    color: #ffc107;
+  }
+  @media  (min-width: 400px){
+    display: flex;
   }
 }
 
