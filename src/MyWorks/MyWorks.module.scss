@@ -8,7 +8,7 @@
   justify-content: center;
 
   .fade {
-    @media (min-width: 450px) {
+    @media screen and (min-width: 450px) {
       width: 80%;
     }
 

@@ -118,9 +118,10 @@ function Main() {
                 <div className={style.mainContainer}>
                     <div className={style.contentBlock}>
                         <div className={style.photo}>
-                            <Tilt options={defaultOptionsForTilt}>
+                            <Tilt options={defaultOptionsForTilt} className={style.largeScreen}>
                                 <img src={photo}/>
                             </Tilt>
+                            <img src={photo} className={style.mobileScreen}/>
                         </div>
                         <div className={style.text}>
                             <span>Welcome</span>
