@@ -20,13 +20,17 @@
       align-items: center;
       width: 280px;
 
-      .inputWrapper {
-        margin-bottom: 15px;
+      .wrapper {
         width: 100%;
+
+        div {
+          height: 23px;
+        }
+
         .input {
           width: 100%;
           background: $bgSecondColor;
-          padding: 5px;
+          padding: 7px;
           color: #ffffff;
           border: 1px solid $bgColor;
           border-radius: 5px;
@@ -36,20 +40,17 @@
             background: $bgSecondColor !important;
           }
         }
-      }
 
-      .textareaWrapper {
-        margin-bottom: 30px;
-        width: 100%;
         .textarea {
           width: 100%;
           background: $bgSecondColor;
-          padding: 5px;
+          padding: 8px;
           color: #ffffff;
           border: 1px solid $bgColor;
           border-radius: 5px;
           font-family: $fontFamiy;
           font-size: inherit;
+          min-height: 120px;
 
           &::-webkit-scrollbar {
             width: 7px;
@@ -64,18 +65,22 @@
             background-color: #f9f9fd;
           }
         }
+
+        .error {
+          border: 1px solid red;
+        }
+
       }
 
       .button {
         @extend .button;
-      }
-
-      .error {
-        border: 1px solid red;
+        margin-top: 15px;
       }
     }
+
   }
 }
+
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,

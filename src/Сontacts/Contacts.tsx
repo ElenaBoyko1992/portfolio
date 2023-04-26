@@ -1,11 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import style from './Contacts.module.scss'
 import Title from "../common/Components/Title";
 import {useFormik} from "formik";
 import {Fade} from "react-awesome-reveal";
 import axios from "axios";
+import {Alert, Snackbar} from "@mui/material";
 
 function Contacts() {
+    const [showSnackbar, setShowSnackbar] = useState(false)
+    const [snackbarMessage, setSnackbarMessage] = useState('')
+    const [error, setError] = useState(false)
+
     const formik = useFormik({
         initialValues: {
             name: '',
@@ -20,14 +25,15 @@ function Contacts() {
                     email: values.email,
                     message: values.message
                 })
-
-                alert('your message has been sent')
+                setSnackbarMessage('Your message has been sent')
+                setError(false)
+                formik.resetForm()
             } catch (e) {
-                alert('Some error!')
-                console.log(e)
+                setSnackbarMessage('Some error. Please try again')
+                setError(true)
+            } finally {
+                setShowSnackbar(true)
             }
-
-            formik.resetForm()
         },
         validate: values => {
             const errors: any = {};
@@ -52,39 +58,58 @@ function Contacts() {
                 <div className={style.contactsContainer}>
                     <Title titleValue={'Contacts'}/>
                     <form className={style.form} action="" onSubmit={formik.handleSubmit}>
-                        <div className={style.inputWrapper}>
+                        <div className={style.wrapper}>
                             <input
                                 className={formik.touched.name && formik.errors.name ? `${style.input} ${style.error}` : style.input}
                                 type="text"
                                 placeholder={'Enter your name'}
                                 {...formik.getFieldProps('name')}
                             />
-                            {formik.touched.name && formik.errors.name ?
-                                <div style={{color: 'red'}}>{formik.errors.name}</div> : null}
+                            <div>
+                                {formik.touched.name && formik.errors.name ?
+                                    <div style={{color: 'red'}}>{formik.errors.name}</div> : null}
+                            </div>
                         </div>
-                        <div className={style.inputWrapper}>
+                        <div className={style.wrapper}>
                             <input
                                 className={formik.touched.email && formik.errors.email ? `${style.input} ${style.error}` : style.input}
                                 type="text"
                                 placeholder={'email'}
                                 {...formik.getFieldProps('email')}
                             />
-                            {formik.touched.email && formik.errors.email ?
-                                <div style={{color: 'red'}}>{formik.errors.email}</div> : null}
+                            <div>
+                                {formik.touched.email && formik.errors.email ?
+                                    <div style={{color: 'red'}}>{formik.errors.email}</div> : null}
+                            </div>
+
                         </div>
-                        <div className={style.textareaWrapper}>
+                        <div className={style.wrapper}>
                             <textarea
                                 className={formik.touched.message && formik.errors.message ? `${style.textarea} ${style.error}` : style.textarea}
                                 placeholder={'message'}
                                 {...formik.getFieldProps('message')}></textarea>
-                            {formik.touched.message && formik.errors.message ?
-                                <div style={{color: 'red'}}>{formik.errors.message}</div> : null}
+                            <div>
+                                {formik.touched.message && formik.errors.message ?
+                                    <div style={{color: 'red'}}>{formik.errors.message}</div> : null}
+                            </div>
                         </div>
-
                         <button type="submit" className={style.button}>Send</button>
                     </form>
+
                 </div>
             </Fade>
+            {showSnackbar &&
+                <Snackbar
+                    open={showSnackbar}
+                    autoHideDuration={6000}
+                    onClose={() => setShowSnackbar(false)}
+                >
+                    <Alert
+                        onClose={() => setShowSnackbar(false)} severity={error ? 'error' : 'success'}
+                    >
+                        {snackbarMessage}
+                    </Alert>
+                </Snackbar>}
         </div>
     );
 }
