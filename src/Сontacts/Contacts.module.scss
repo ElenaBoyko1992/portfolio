@@ -75,6 +75,13 @@
       .button {
         @extend .button;
         margin-top: 15px;
+        padding: 0 2.6rem;
+        height: 47px;
+        font-size: 16px;
+        &:disabled{
+          color: gray;
+          border: 2px solid gray;
+        }
       }
     }
 

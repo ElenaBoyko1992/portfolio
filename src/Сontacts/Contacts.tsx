@@ -4,12 +4,19 @@ import Title from "../common/Components/Title";
 import {useFormik} from "formik";
 import {Fade} from "react-awesome-reveal";
 import axios from "axios";
-import {Alert, Snackbar} from "@mui/material";
+import {Alert, Button, CircularProgress, Snackbar} from "@mui/material";
+
+type FormikErrorType = {
+    name?: string
+    email?: string
+    message?: string
+}
 
 function Contacts() {
     const [showSnackbar, setShowSnackbar] = useState(false)
     const [snackbarMessage, setSnackbarMessage] = useState('')
     const [error, setError] = useState(false)
+    const [loading, setLoading] = useState(false)
 
     const formik = useFormik({
         initialValues: {
@@ -18,7 +25,7 @@ function Contacts() {
             message: ''
         },
         onSubmit: async values => {
-            /*alert(JSON.stringify(values));*/
+            setLoading(true)
             try {
                 await axios.post('https://portfolio-backend-tan.vercel.app/sendMessage', {
                     name: values.name,
@@ -33,10 +40,11 @@ function Contacts() {
                 setError(true)
             } finally {
                 setShowSnackbar(true)
+                setLoading(false)
             }
         },
         validate: values => {
-            const errors: any = {};
+            const errors: FormikErrorType = {};
             if (!values.email) {
                 errors.email = 'Please enter your email';
             } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
@@ -67,7 +75,7 @@ function Contacts() {
                             />
                             <div>
                                 {formik.touched.name && formik.errors.name ?
-                                    <div style={{color: 'red'}}>{formik.errors.name}</div> : null}
+                                    <div style={{color: 'red', fontSize: '13px'}}>{formik.errors.name}</div> : null}
                             </div>
                         </div>
                         <div className={style.wrapper}>
@@ -79,7 +87,7 @@ function Contacts() {
                             />
                             <div>
                                 {formik.touched.email && formik.errors.email ?
-                                    <div style={{color: 'red'}}>{formik.errors.email}</div> : null}
+                                    <div style={{color: 'red', fontSize: '13px'}}>{formik.errors.email}</div> : null}
                             </div>
 
                         </div>
@@ -90,10 +98,11 @@ function Contacts() {
                                 {...formik.getFieldProps('message')}></textarea>
                             <div>
                                 {formik.touched.message && formik.errors.message ?
-                                    <div style={{color: 'red'}}>{formik.errors.message}</div> : null}
+                                    <div style={{color: 'red', fontSize: '13px'}}>{formik.errors.message}</div> : null}
                             </div>
                         </div>
-                        <button type="submit" className={style.button}>Send</button>
+                        <button type="submit" className={style.button} disabled={loading}>{loading ?
+                            <CircularProgress size={25} color={"inherit"}/> : 'Send'}</button>
                     </form>
 
                 </div>
