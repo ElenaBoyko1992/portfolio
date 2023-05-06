@@ -4,7 +4,7 @@ import Title from "../common/Components/Title";
 import {useFormik} from "formik";
 import {Fade} from "react-awesome-reveal";
 import axios from "axios";
-import {Alert, Button, CircularProgress, Snackbar} from "@mui/material";
+import {Alert, CircularProgress, Snackbar} from "@mui/material";
 
 type FormikErrorType = {
     name?: string
@@ -17,6 +17,10 @@ function Contacts() {
     const [snackbarMessage, setSnackbarMessage] = useState('')
     const [error, setError] = useState(false)
     const [loading, setLoading] = useState(false)
+
+    const closeSnackbar = () => {
+        setShowSnackbar(false)
+    }
 
     const formik = useFormik({
         initialValues: {
@@ -111,10 +115,10 @@ function Contacts() {
                 <Snackbar
                     open={showSnackbar}
                     autoHideDuration={6000}
-                    onClose={() => setShowSnackbar(false)}
+                    onClose={closeSnackbar}
                 >
                     <Alert
-                        onClose={() => setShowSnackbar(false)} severity={error ? 'error' : 'success'}
+                        onClose={closeSnackbar} severity={error ? 'error' : 'success'}
                     >
                         {snackbarMessage}
                     </Alert>

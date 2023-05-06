@@ -7,7 +7,6 @@ function BurgerNav() {
     let [menuIsOpen, setMenuIsOpen] = useState(false);
     const onBurgerBtnClick = () => {
         setMenuIsOpen(!menuIsOpen)
-        console.log(menuIsOpen)
     };
     return (
         <div className={style.burgerNavs}>
