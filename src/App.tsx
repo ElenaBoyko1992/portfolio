@@ -51,13 +51,13 @@ function App() {
         id: 1,
         img: todoImg,
         projectName: 'To-do list',
-        shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, adipisci ducimus eaque illo ipsam laudantium molestiae nesciunt optio possimus provident.',
+        shortDescription: 'A web application for compiling to-do lists and tracking the status of their completion.',
         link: 'https://github.com/ElenaBoyko1992/it-incubator-todolist-ts-01'
     }, {
         id: 2,
         img: socialNetworkImg,
         projectName: 'Social network',
-        shortDescription: 'Quos sequi soluta tempore velit, voluptatibus? Provident saepe sapiente ullam.',
+        shortDescription: 'An online platform for communication, acquaintance with new people, information exchange and entertainment.',
         link: 'https://github.com/ElenaBoyko1992/samurai-way-in-TS'
     }]
 
