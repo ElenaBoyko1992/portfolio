@@ -9,6 +9,7 @@ import Contacts from './Сontacts/Contacts';
 import Footer, {ContactsForFooterType} from './Footer/Footer';
 import {BrowserRouter} from 'react-router-dom';
 import css from './assets/icons/css-file-type-svgrepo-com.svg'
+import html from './assets/icons/html-file-type-svgrepo-com.svg'
 import js from './assets/icons/java-script-svgrepo-com.svg'
 import react from './assets/icons/react-svgrepo-com.svg'
 import redux from './assets/icons/redux-svgrepo-com.svg'
@@ -27,9 +28,9 @@ function App() {
         icon: js
     }, {
         id: 2,
-        title: 'CSS',
-        description: 'Positioning, Flexbox, Grid, pseudo-classes, pseudo-elements, absolute and relative units, form styling, media queries.',
-        icon: css
+        title: 'HTML',
+        description: 'Tags, attributes, links, images, lists, tables, forms.',
+        icon: html
     }, {
         id: 3,
         title: 'CSS',
