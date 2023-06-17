@@ -15,6 +15,7 @@ import react from './assets/icons/react-svgrepo-com.svg'
 import redux from './assets/icons/redux-svgrepo-com.svg'
 import todoImg from './assets/images/to-do-list.webp'
 import socialNetworkImg from './assets/images/socialNetwork.jpg'
+import cardsImg from './assets/images/cards.png'
 import vkLogo from './assets/icons/vk-logo-svgrepo-com.svg'
 import telegramLogo from './assets/icons/telegram-svgrepo-com.svg'
 import githubLogo from './assets/icons/github-svgrepo-com.svg'
@@ -51,15 +52,21 @@ function App() {
     const myWorks: Array<MyWork> = [{
         id: 1,
         img: todoImg,
-        projectName: 'To-do list',
+        projectName: 'Task tracker',
         shortDescription: 'A web application for compiling to-do lists and tracking the status of their completion.',
         link: 'https://github.com/ElenaBoyko1992/it-incubator-todolist-ts-01'
     }, {
         id: 2,
         img: socialNetworkImg,
-        projectName: 'Social network',
+        projectName: 'Friends Finder',
         shortDescription: 'An online platform for communication, acquaintance with new people, information exchange and entertainment.',
         link: 'https://github.com/ElenaBoyko1992/samurai-way-in-TS'
+    }, {
+        id: 3,
+        img: cardsImg,
+        projectName: 'Study cards',
+        shortDescription: 'A convenient and affordable tool for remembering specific events, terms and other important information.',
+        link: 'https://github.com/ElenaBoyko1992/cards'
     }]
 
     const myContactsForFooter: Array<ContactsForFooterType> = [
