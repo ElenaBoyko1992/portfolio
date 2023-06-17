@@ -5,7 +5,7 @@ import {ButtonLink} from "common/Components/ButtonLink";
 
 function Footer(props: FooterPropsType) {
     return (
-        <div className={style.footer}>
+        <footer className={style.footer}>
             <div className={style.footerContainer}>
                 <Title titleValue={'Elena Boiko'}/>
                 <div className={style.socialLogos}>
@@ -14,7 +14,7 @@ function Footer(props: FooterPropsType) {
                                                                     key={c.id}/>)}
                 </div>
             </div>
-        </div>
+        </footer>
     );
 }
 

@@ -35,7 +35,7 @@ function Main() {
         await console.log(container);
     }, []);
     return (
-        <div id={'main'} className={style.mainBlock}>
+        <section id={'main'} className={style.mainBlock}>
             <Particles className={style.tsparticles}
                        init={particlesInit}
                        loaded={particlesLoaded}
@@ -135,7 +135,7 @@ function Main() {
                     </div>
                 </div>
             </Fade>
-        </div>
+        </section>
     )
 
 }

@@ -65,7 +65,7 @@ function Contacts() {
         }
     })
     return (
-        <div className={style.contactsBlock} id={'contacts'}>
+        <section className={style.contactsBlock} id={'contacts'}>
             <Fade direction={'left'} triggerOnce={true}>
                 <div className={style.contactsContainer}>
                     <Title titleValue={'Contacts'}/>
@@ -123,7 +123,7 @@ function Contacts() {
                         {snackbarMessage}
                     </Alert>
                 </Snackbar>}
-        </div>
+        </section>
     );
 }
 

@@ -18,7 +18,7 @@ type MyWorksPropsType = {
 
 function MyWorks(props: MyWorksPropsType) {
     return (
-        <div className={style.myWorksBlock}>
+        <section className={style.myWorksBlock}>
             <Fade direction={"left"} className={style.fade} triggerOnce={true}>
                 <div className={style.myWorksContainer} id={'projects'}>
                     <Title titleValue={'My works'}/>
@@ -28,7 +28,7 @@ function MyWorks(props: MyWorksPropsType) {
                     </div>
                 </div>
             </Fade>
-        </div>
+        </section>
     );
 }
 

@@ -8,7 +8,7 @@ import {Fade} from "react-awesome-reveal";
 function Skills(props: SkillsPropsType) {
     return (
 
-        <div className={style.skillsBlock} id={'skills'}>
+        <section className={style.skillsBlock} id={'skills'}>
             <Fade direction={'left'} className={style.fade} triggerOnce={true}>
                 <div className={style.skillsContainer}>
                     <Title titleValue={'Skills'}/>
@@ -18,7 +18,7 @@ function Skills(props: SkillsPropsType) {
                     </div>
                 </div>
             </Fade>
-        </div>
+        </section>
 
     );
 }

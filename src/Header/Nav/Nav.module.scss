@@ -15,8 +15,14 @@
   .active {
     color: #ffc107;
   }
-  @media screen and (min-width: 400px){
+
+  @media screen and (min-width: 400px) {
     display: flex;
+  }
+
+  li {
+    list-style-type: none;
+    cursor: pointer;
   }
 }
 

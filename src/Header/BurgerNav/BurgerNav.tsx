@@ -9,9 +9,9 @@ function BurgerNav() {
         setMenuIsOpen(!menuIsOpen)
     };
     return (
-        <div className={style.burgerNavs}>
-            <div className={menuIsOpen ? `${style.burgerNavsItems} ${style.show}` : style.burgerNavsItems}>
-                <Link
+        <nav className={style.burgerNavs}>
+            <ul className={menuIsOpen ? `${style.burgerNavsItems} ${style.show}` : style.burgerNavsItems}>
+                <li><Link
                     className={style.burgerNav}
                     activeClass={style.active}
                     to="main"
@@ -20,9 +20,8 @@ function BurgerNav() {
                     offset={-1}
                     duration={500}
                     onClick={onBurgerBtnClick}
-                >Main</Link>
-
-                <Link
+                >Main</Link></li>
+                <li><Link
                     className={style.burgerNav}
                     activeClass={style.active}
                     to="skills"
@@ -31,9 +30,8 @@ function BurgerNav() {
                     offset={-1}
                     duration={500}
                     onClick={onBurgerBtnClick}
-                >Skills</Link>
-
-                <Link
+                >Skills</Link></li>
+                <li><Link
                     className={style.burgerNav}
                     activeClass={style.active}
                     to="projects"
@@ -42,9 +40,8 @@ function BurgerNav() {
                     offset={2.5}
                     duration={500}
                     onClick={onBurgerBtnClick}
-                >Projects</Link>
-
-                <Link
+                >Projects</Link></li>
+                <li><Link
                     className={style.burgerNav}
                     activeClass={style.active}
                     to="contacts"
@@ -53,15 +50,15 @@ function BurgerNav() {
                     offset={2.5}
                     duration={500}
                     onClick={onBurgerBtnClick}
-                >Contacts</Link>
-            </div>
+                >Contacts</Link></li>
+            </ul>
             <div className={menuIsOpen ? `${style.burgerBtn} ${style.btnActive}` : style.burgerBtn}
                  onClick={onBurgerBtnClick}>
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-        </div>
+        </nav>
     );
 }
 

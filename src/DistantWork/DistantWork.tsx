@@ -5,17 +5,16 @@ import {Fade} from "react-awesome-reveal";
 import {ButtonLink} from "common/Components/ButtonLink";
 
 
-
 function DistantWork() {
     return (
-        <div className={style.distantWorkBlock}>
+        <section className={style.distantWorkBlock}>
             <Fade direction={'left'} triggerOnce={true}>
                 <div className={style.distantWorkContainer}>
                     <Title titleValue={'Looking into remote work options'}/>
                     <ButtonLink href='#contacts'>Hire me</ButtonLink>
                 </div>
             </Fade>
-        </div>
+        </section>
     );
 }
 

@@ -24,7 +24,7 @@ body {
 }
 
 .App {
-  > div {
+  > section, footer {
     &:nth-child(n) {
       background-color: $bgSecondColor;
     }
